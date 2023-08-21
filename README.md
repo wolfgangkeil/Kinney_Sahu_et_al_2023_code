@@ -69,9 +69,12 @@ if you are unsure about whether AP and DV orientation is correct in the straight
 3/ once AP and DV orientation is corrected, it asks you to do see at which x-coordinate the data starts and at which it ends, scroll through z and t to get the maximum extent of the worm data
 4/ it will process the data in chops, asking you to specify the range of z slices that should be maximum-z-projected for further spot analysis
 5/ it will ask you to click on a landmark in the first frame and then on the same landmark in all subsequent frames
+
 6/ it will save a registered z-stack in a folder named chop_xx in the position folder
+
 7/ repeat steps 3/-6/ for each position and each chop
-5/ Deletion of bad frames
+
+### Deletion of bad frames
 open FIJI and then for each chop_0.tif in each position pos0
 scroll through the frames and evaluate them for movement
 open a text file with textedit, and write the indices of the frames that should be deleted before tracking can begin
