@@ -1,0 +1,12 @@
+# ignore all directories with the name data
+data/
+# ignore all .md files except the README
+*.md
+!README.md
+
+#ignore temporary matlab files
+*.m~
+*.log
+
+.DS_Store
+
