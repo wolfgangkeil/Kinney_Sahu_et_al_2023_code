@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Code accompanying Stec et al. Current Biology, 2020
 
 This repository contains whole-animal fluorescence traces obtained from long-term live imaging with Microfluidics (Keil et al. Dev Cell 2017) as well as MATLAB® scripts to replicate the analyses of pulsatile gene expression, performed in Stec et al. Current Biology (2020), Figure 5.
@@ -48,3 +49,7 @@ All code is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details at <https://www.gnu.org/licenses/>.
+=======
+# Kinney_Sahu_et_al_2023_code
+Code for MS2-MCP-GFP data analysis
+>>>>>>> 8893d3d3ed0f0a4efd5017b4ef379a6df97d35dc
