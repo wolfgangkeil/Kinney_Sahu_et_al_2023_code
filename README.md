@@ -11,6 +11,9 @@ For questions, please contact wolfgang.keil@curie.fr
 Download by
 $ git clone  https://github.com/wolfgangkeil/Kinney_Sahu_et_al_2023_code.git
 
+## Prerequisites
+This code needs an installation of Matlab, Fiji (including the version 7 of the TrackMate plugin), and Ilastik. 
+
 ## Data
 Raw data for an imaging experiment that can be processed with the code in this repository is available on the zenodo community page of the Keil lab: https://zenodo.org/communities/qdevbioteam/ .
 
@@ -79,6 +82,7 @@ It's a good idea to open these files and check that the right frames have been d
 
 ## MS2-MCP-GFP spot tracking and analysis
 
+Make sure to 
 ### Tracking of hypodermal nuclei
 1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/
 2/ Open File run_nucleus_tracking.m and change the lines about experiment_folder, worm_index according to your needs
