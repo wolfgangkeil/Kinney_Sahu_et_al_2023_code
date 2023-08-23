@@ -42,12 +42,12 @@ This script takes several hours to run on an average data set
 Output files are stored in a folder called worm_1_straightened and within this folder there are subfolders for each position and each channel
 
 ### Z drift correction
-1/ Go through the raw data once and generate a file called z_drift.csv within the <experiment_folder>
+1/ Go through the straightened data once and generate a file called z_drift.csv within the <experiment_folder>
 An example of such a file can be found in the zenodo repository . 
 The convention for z-drift is the following: if your feature is in focus at slice s1 in frame 1, and at slice s2 in frame 2, then the zdrift between the two frames is s2-s1
 IMPORTANT: Even if no z-drift should be applied, the z_drift.csv file must be generated and then have all zeros in it!
 
-2/ open FIJI and then open macro '<PATH_TO_YOUR_EXPERIMENT_FOLDER>/<experiment_folder>/correct_z_drift.ijm'
+2/ open FIJI and then open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/correct_z_drift.ijm'
 change the lines about experiment_folder, worm_index, channels and z_drift file in the script according to your needs
 run the macro
 this will open all the straightened files, apply the z-drift and resave the files in worm_1_drift_corrected, can take time, approx 1h for a 100frames dataset
