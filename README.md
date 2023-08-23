@@ -16,6 +16,9 @@ Raw data for an imaging experiment that can be processed with the code in this r
 
 The raw dataset is ~50GB. Running the analysis will generate additional folders and files of  ~100GB. Make sure you have enough disk space in the location you are running this analysis in.
 
+## Limiting the amount of manual clicking
+The entire procedure requires a lot of manual clicking for large data sets. In order to reduce this a bit, it's best to create a file called "frame_range.txt" in the experiment_folder. This file should contain only two numbers, the first and the last frame that should be considered during the MCP-GFP spot tracking and analysis.
+
 ## Overview of the pre-processing steps to be followed
 
 Straightening => Z drift correction => Manual pre-registration => deletion of "bad" frames
