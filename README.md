@@ -12,7 +12,7 @@ Download by
 $ git clone  https://github.com/wolfgangkeil/Kinney_Sahu_et_al_2023_code.git
 
 ## Prerequisites
-This code needs an installation of Matlab, Fiji (including the version 7 of the TrackMate plugin), and Ilastik. 
+This code needs an installation of Matlab, Fiji (including the version 7 of the TrackMate plugin and the ImageJ-Matlab plugin), and Ilastik. 
 
 ## Data
 Raw data for an imaging experiment that can be processed with the code in this repository is available on the zenodo community page of the Keil lab: https://zenodo.org/communities/qdevbioteam/ .
