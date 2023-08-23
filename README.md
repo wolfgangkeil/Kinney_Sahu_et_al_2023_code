@@ -77,9 +77,31 @@ This macro generates two files GFP_stackreg.tiff and mCherry_stackreg.tiff in ea
 It's a good idea to open these files and check that the right frames have been deleted and cells are really stable for tracking
 
 
-## Nuclear tracking and MS2 spot detection
+## MS2-MCP-GFP spot tracking and analysis
 
+### Tracking of hypodermal nuclei
+1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/
+2/ Open File run_nucleus_tracking.m and change the lines about experiment_folder, worm_index according to your needs
+3/ run the script
 
+This script will save files called mCherry_stackreg_Probabilities.tiff, using and Ilastik classifier in each chop folder for each position, which will be used for tracking the nuclei
+
+### Manually Correcting the nuclear tracks
+1/ Open matlab, go to /home/keil-workstation/Desktop/Wolfgang/matlab/MS2-MCP-GFP
+2/ Open file, manually_correct_nucleus_tracking.m
+3/ Run the command giving the experiment folder
+4/ after defining the experiment folder, run the command:  manually_correct_nucleus_tracking(experiment_folder,worm_index,position, chop). Here worm index will always remain 1
+once the image is opened, open trackmate and then track the cells as you would normally do. After that save the xml files. When you click on 'yes' within the dialogue box. This deletes old files and generates new tiff files.
+
+### Tracking of MS2-MCP-GFP spots in each tracked nucleus
+1/ Open Matlab, go to folder /home/keil-workstation/Desktop/Wolfgang/matlab/MS2-MCP-GFP
+2/ Open File run_MS2_MCP_GFP_spot_tracking.m and change the lines about experiment_folder, worm_index according to your needs
+3/ run the script
+
+This script will go through each chop of each position, load the nuclear tracks and try to track MS2-MCP-GFP spots
+It will display the MS2-signals it detects and ask you to specify whether you want to keep this signal for any potential plot (Include in Plot)
+Then it will ask you to say whether the cell in question is a seam cell, a hyp or an anterior daughter or not, to help you determine this, it will show an image of the first frame of the mCherry channel and overlay the track and also an image of the straightened worm on this position
+The script saves .mat files with MS2 track information (positions, intensities etc.) for each nucleus
 
 ## License
 Copyright (c) [2023] [Wolfgang Keil]
