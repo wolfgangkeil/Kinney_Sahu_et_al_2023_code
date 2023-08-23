@@ -50,7 +50,7 @@ IMPORTANT: Even if no z-drift should be applied, the z_drift.csv file must be ge
 2/ open FIJI and then open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/correct_z_drift.ijm'
 change the lines about experiment_folder, worm_index, channels and z_drift file in the script according to your needs
 run the macro
-this will open all the straightened files, apply the z-drift and resave the files in worm_1_drift_corrected, can take time, approx 1h for a 100frames dataset
+this will open all the straightened files, apply the z-drift and resave the files in worm_1_drift_corrected, can take a few minutes for a 100 frame data set
 
 ### Manual pre-registration and z-projection
 The pre-registration requires a lot of manual clicking for large data sets. In order to reduce this a bit, it's best to create a file called "frame_range.txt" in the experiment_folder. This file should contain only two numbers, the first and the last frame that should be considered during the MCP-GFP spot tracking analysis. 
