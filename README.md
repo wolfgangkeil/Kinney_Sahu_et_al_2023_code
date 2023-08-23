@@ -44,25 +44,10 @@ straighten_imaging_experiment(experiment_folder, trigger_channel, channels2strai
 This script takes several hours to run on an average data set 
 Output files are stored in a folder called worm_1_straightened and within this folder there are subfolders for each position and each channel
 
-### Z drift correction
-1/ Go through the straightened data once and generate a file called z_drift.csv within the <experiment_folder>
-An example of such a file can be found in the zenodo repository . 
-The convention for z-drift is the following: if your feature is in focus at slice s1 in frame 1, and at slice s2 in frame 2, then the zdrift between the two frames is s2-s1
-IMPORTANT: Even if no z-drift should be applied, the z_drift.csv file must be generated and then have all zeros in it!
-
-2/ open FIJI and then open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/correct_z_drift.ijm'
-change the lines about experiment_folder, worm_index, channels and z_drift file in the script according to your needs
-run the macro
-this will open all the straightened files, apply the z-drift and resave the files in worm_1_drift_corrected, can take a few minutes for a 100 frame data set
-
 ### Manual pre-registration and z-projection
-The pre-registration requires a lot of manual clicking for large data sets. In order to reduce this a bit, it's best to create a file called "frame_range.txt" in the experiment_folder. This file should contain only two numbers, the first and the last frame that should be considered during the MCP-GFP spot tracking analysis. 
+Now you are ready for some clicking. In this step, the straightened worm z-stack will be divided into smaller "chops" along its anteroposterior axis. For each of these chops, you will be asked to click on a landmark nucleus and the code will align each chop such that the position of the landmark nucleus remains fixed. This step is necessary to obtain trackable nuclei along the entire anteroposterior axis of animal.
 
-NOTE: The range of frames should cover the ENTIRE period of transcriptional activity throughout the worm. To be safe, add 10 frames before the first MS2 dots appear in the worm, and 10 frames after the last dot disappears.
-
-Now you are ready for some clicking
-
-open FIJI and then open macro "/home/keil-workstation/Desktop/Wolfgang/fiji/manual_pre_registration.ijm"
+open FIJI and then open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/manual_pre_registration.ijm"
 change the lines about experiment_folder, worm_index and channels in the script according to your needs
 run the macro
 this macro will ask you several times for your input, doing the following:
