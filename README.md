@@ -55,29 +55,43 @@ open FIJI and then open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/
 change the lines about experiment_folder, worm_index and channels in the script according to your needs
 run the macro
 this macro will ask you several times for your input, doing the following:
-1/, it loads all data for a given position into a combined hyperstack 
+1/ it loads all data for a given position into a combined hyperstack 
+
 2/ it asks you whether anterior-posterior alignment or dorsal-ventral alignment needs to be inverted (the straightening algorithm doesn't know where head and tail or dorsal and ventral is
 if you are unsure about whether AP and DV orientation is correct in the straightened stack, go back to the original data for this position and try to figure it out based on gonadal morphology, vulval cell location etc.
+
 3/ once AP and DV orientation is corrected, it asks you to do see at which x-coordinate the data starts and at which it ends, scroll through z and t to get the maximum extent of the worm data
+
 4/ it will process the data in chops, asking you to specify the range of z slices that should be maximum-z-projected to obtain a good landmark cell. Choose the range that covers the hypodermal cells. In the zenodo dataset, this is slice 20-30.
+
 5/ It will ask you to click on a landmark in the first frame and then on the same landmark in all subsequent frames
+
 6/ It will save a registered z-stack in a folder named chop_xx in the position folder
+
 7/ repeat steps 3/-6/ for each position and each chop
 
 ### Deletion of "bad" frames
 1/ open FIJI and then for each chop_0.tif in each position pos0
-2/ scroll through the frames and evaluate them for movement
-3/ open a text file with textedit, and write the indices of the frames that should be deleted before tracking can begin
-be generous here, because nothing is worse than messed up tracking, delete frames with too much movement of the cells or frames that are blurry
-4/ save the text file under frames2delete.txt in the chop0 folder
-5/ if you think that all frames can be used, do not save any file for this chop
-6/ repeat for each chop of each position
-7/ open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/delete_invalid_frames.ijm"
-8/ change the lines about experiment_folder, worm_index and channels in the script according to your needs
-run the macro
 
-This macro generates two files GFP_stackreg.tiff and mCherry_stackreg.tiff in each chop folder 
-It's a good idea to open these files and check that the right frames have been deleted and cells are really stable for tracking
+2/ scroll through the frames and evaluate them for movement
+
+3/ open a text file with textedit, and write the indices of the frames that should be deleted before tracking can begin
+
+be generous here, because nothing is worse than messed up tracking, delete frames with too much movement of the cells or frames that are blurry
+
+4/ save the text file under frames2delete.txt in the chop0 folder
+
+5/ if you think that all frames can be used, do not save any file for this chop
+
+6/ repeat for each chop of each position
+
+7/ open macro '<PATH_TO_YOUR_GITHUB_CLONE>/preprocessing/imageJ/delete_invalid_frames.ijm"
+
+8/ change the lines about experiment_folder, worm_index and channels in the script according to your needs
+
+9/ run the macro
+
+This macro generates two files GFP_stackreg.tiff and mCherry_stackreg.tiff in each chop folder. It's a good idea to open these files and check that the right frames have been deleted and cells are really stable for tracking
 
 
 ## MS2-MCP-GFP spot tracking and analysis
@@ -85,7 +99,9 @@ It's a good idea to open these files and check that the right frames have been d
 Make sure to 
 ### Tracking of hypodermal nuclei
 1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/
+
 2/ Open File run_nucleus_tracking.m and change the lines about experiment_folder, worm_index according to your needs
+
 3/ run the script
 
 This script will save files called mCherry_stackreg_Probabilities.tiff, using and Ilastik classifier in each chop folder for each position, which will be used for tracking the nuclei
