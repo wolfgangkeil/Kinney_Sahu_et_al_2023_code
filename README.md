@@ -23,12 +23,12 @@ Straightening => Z drift correction => Manual pre-registration => deletion of "b
 ### Straightening
 1/ Generate a folder <experiment_folder> and past the folder called "raw_data" in it.
 
-2/ Open Matlab, go to folder <PATH_TO_GITHUB_REPOSITORY>/Kinney_Sahu_et_al_2023_code/preprocessing
+2/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/preprocessing
 
 3/ Open File batch_process_experiments.m and execute:
 Modify the script such that it executes the following commands:
 
-experiment_folder = '<PATH_TO_YOUR_EXPERIMENT_FOLDER>/<experiment_folder>';
+experiment_folder = '<PATH_TO_YOUR_EXPERIMENT_FOLDER>';
 trigger_channel = 1; % means this channel is used for midline finding and straightening
 channels2straighten = 2;
 channel_names = {'GFP', 'mCherry'};
