@@ -36,7 +36,7 @@ experiment_folder = '<PATH_TO_YOUR_EXPERIMENT_FOLDER>';
 trigger_channel = 1; % means this channel is used for midline finding and straightening
 channels2straighten = 2;
 channel_names = {'GFP', 'mCherry'};
-worm_positions = {[1,2,3,4], [5,6,7]};
+worm_positions = {[1,2]};
 IsMultiWormFolder = 0;
  
 straighten_imaging_experiment(experiment_folder, trigger_channel, channels2straighten, ...
