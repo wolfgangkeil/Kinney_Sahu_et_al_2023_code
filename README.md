@@ -139,6 +139,19 @@ The script saves also .mat files with MS2 track information (positions, intensit
 
 3/ run the script
 
+This script saves '.mat' files called 'spots_track_<trackID>.mat' in each chop folder. These files contain a matlab structure called spots, that contains all the quantification for 
+
+### Plotting the obtained MS2 traces
+
+1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/matlab/
+
+2/ Open File plot_MS2_traces_all_nuclei_single_worm.m and change the lines about experiment_folder, worm_index according to your needs
+
+3/ run the script
+
+This script generates a figure will all MS2 traces obtained for a given animal (i.e. in all chops/positions)
+
+
 ## License
 Copyright (c) [2023] [Wolfgang Keil]
 
