@@ -100,7 +100,7 @@ This macro generates two files GFP_stackreg.tiff and mCherry_stackreg.tiff in ea
 
 Make sure to 
 ### Tracking of hypodermal nuclei
-1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/
+1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/matlab/
 
 2/ Open File run_nucleus_tracking.m and change the lines about experiment_folder, worm_index according to your needs
 
@@ -109,24 +109,35 @@ Make sure to
 This script will save files called mCherry_stackreg_Probabilities.tiff, using and Ilastik classifier in each chop folder for each position, which will be used for tracking the nuclei
 
 ### Manually Correcting the nuclear tracks
-1/ Open matlab, go to /home/keil-workstation/Desktop/Wolfgang/matlab/MS2-MCP-GFP
+1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/matlab/
 
-2/ Open file, manually_correct_nucleus_tracking.m
+2/ Open File run_nucleus_tracking.m and change the lines about experiment_folder, worm_index, position and chop according to the chop you would like to modify the tracking of
 
-3/ Run the command giving the experiment folder
+3/ run the script
 
-4/ after defining the experiment folder, run the command:  manually_correct_nucleus_tracking(experiment_folder,worm_index,position, chop). Here worm index will always remain 1
-once the image is opened, open trackmate and then track the cells as you would normally do. After that save the xml files. When you click on 'yes' within the dialogue box. This deletes old files and generates new tiff files.
+4/ The script will open an image, once the image is opened, open trackmate and then track the cells as you would normally do. After that save the xml files. When you click on 'yes' within the dialogue box. This deletes old files and generates new tiff files.
 
 ### Tracking of MS2-MCP-GFP spots in each tracked nucleus
 
-1/ Open Matlab, go to folder /home/keil-workstation/Desktop/Wolfgang/matlab/MS2-MCP-GFP
+1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/matlab/
 
 2/ Open File run_MS2_MCP_GFP_spot_tracking.m and change the lines about experiment_folder, worm_index according to your needs
 
 3/ run the script
 
-This script will go through each chop of each position, load the nuclear tracks and try to track MS2-MCP-GFP spots. It will display the MS2-signals it detects and ask you to specify whether you want to keep this signal for any potential plot (Include in Plot). Then it will ask you to say whether the cell in question is a seam cell, a hyp or an anterior daughter or not, to help you determine this, it will show an image of the first frame of the mCherry channel and overlay the track and also an image of the straightened worm on this position. The script saves .mat files with MS2 track information (positions, intensities etc.) for each nucleus
+This script will go through each chop of each position, load the nuclear tracks and ask you to specify whether you want to track MS2 spots in the nucleus track it detected. Since tracking MS2 spots is a lot of work, only track spots in tracks you want to keep. 
+
+/4 If you click 'yes' on a nuclear track, the script will open the nuclear track hyperstack. Open trackmate and track the MS2 dots. Once you are happy with the tracks, save the trackmate file under the name 'pos_<POS>_chop_<CHOP>_trackID_<trackID>.xml'.
+
+The script saves also .mat files with MS2 track information (positions, intensities etc.) for each nucleus that can be used for plotting the data.
+
+### Processing the MS2 MS2-MCP-GFP spots in each tracked nucleus
+
+1/ Open Matlab, go to folder <PATH_TO_YOUR_GITHUB_CLONE>/Kinney_Sahu_et_al_2023_code/MS2-MCP-GFP_analysis/matlab/
+
+2/ Open File calculate_all_single_worm_MS2_traces.m and change the lines about experiment_folder, worm_index according to your needs
+
+3/ run the script
 
 ## License
 Copyright (c) [2023] [Wolfgang Keil]
