@@ -1,0 +1,8 @@
+This directory contains a graph algorithm library for Matlab.
+
+Developed by Hanchuan Peng (Hanchuan.Peng@gmail.com)
+
+If you cannot find some mex files for your operating system, try to run make_os_mex.m .
+
+Last noted on 2008-May-19.
+

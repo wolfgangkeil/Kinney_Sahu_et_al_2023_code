@@ -1,0 +1,31 @@
+This directory contains a demo program to show the BDB- algorithm developed by Hanchuan Peng, et al.
+
+The Matlab program "mydemo.m" (which will call main_simple_BDB_minus.m) will show the basic idea of how the method works.
+
+The detail of the algorithm can be found in the paper:
+
+Peng, H., Long, F., Liu, X., Kim, S., and Myers, E.W., "Straightening C. elegans images," 
+Bioinformatics, Vol. 24, No. 2, pp. 234-242, 2008.
+
+This package also includes a graph algorithm library written by Hanchuan Peng.
+
+** Note ** 
+
+You will have to agree the following terms, before downloading/using/running/editing/changing any portion of codes in this package.
+
+(1) You agree to appropriately cite the above paper in your related work.
+
+(2) This package, or any portion of it, cannot be redistributed in the original or any revised form without the written permission from Hanchuan Peng.
+
+(3) This package is free for non-profit research, but needs a license for any commercial purpose. Please contact Hanchuan Peng for details.
+
+(4) The software is provided "AS-IS" and without warranty of any kind, express, implied or otherwise, including without limitation, any warranty of merchantability or fitness for a particular purpose.
+
+(5) In no event shall Hanchuan Peng or the Howard Hughes Medical Institute be liable for any special, incudental, indirect or consequential damages of any kind, or any damages whatsoever resulting from loss of use, data or profits, whether or not advised of the possibility of damage, and on any theory of liability, arising out of or in connection with the use or performance of this software. 
+
+(6) Use of this source code constitutes an agreement not to criticize, in any way, the code-writing style of the author, including any statements regarding the extent of documentation and comments present. 
+
+(7) Neither the name of the Howard Hughes Medical Institute, Janelia Farm Research Campus, nor Hanchuan Peng, may be used to endorse or promote products derived from this software without specific prior written permission.
+
+Last update: 2008-May-23 (v0.91)
+
