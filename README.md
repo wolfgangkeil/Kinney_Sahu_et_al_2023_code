@@ -1,8 +1,8 @@
-# Code accompanying Kinney & Sahu et al. Developmental Cell, 2023
+# Code accompanying Kinney & Sahu et al. Developmental Cell, 2023, https://doi.org/10.1016/j.devcel.2023.08.006
 
 This repository contains MATLAB scripts and ImageJ macros for analyzing MS2-MCP-GFP live movies in developing C. elegans larva, harboring the transgene cshIs136[lin-4::24xMS2] I; mnCI-mCherry/cshIs139[rpl-28pro::MCPGFP::SL2 Histone mCherry].
 
-If you use parts of this code please cite: (paste reference whenever online)
+If you use parts of this code please cite: Kinney & Sahu et al. (2023), https://doi.org/10.1016/j.devcel.2023.08.006
 
 For questions, please contact wolfgang.keil@curie.fr
 
